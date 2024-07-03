@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "./navLink";
 
 const Links = () => {
   interface LinkType {
@@ -28,9 +29,7 @@ const Links = () => {
   return (
     <div className="flex gap-10">
       {links.map((link) => (
-        <Link key={link.title} href={link.path}>
-          {link.title}
-        </Link>
+        <NavLink item={link} key={link.title} />
       ))}
     </div>
   );

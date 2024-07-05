@@ -1,6 +1,5 @@
 "use client";
 
-import { link } from "fs";
 import NavLink from "./navLink";
 import { useState } from "react";
 
@@ -37,7 +36,7 @@ const Links = () => {
 
   return (
     <div className="flex gap-32">
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex gap-12">
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}
